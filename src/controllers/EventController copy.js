@@ -1,7 +1,6 @@
 const Event = require('../models/Event');
 const User =  require('../models/User');
 const jwt =      require('jsonwebtoken');
-const Order = require('../models/Order');
 //const { delete } = require('../routes');
 
 module.exports = {
