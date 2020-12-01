@@ -18,7 +18,7 @@ const upload = multer(uploadConfig)
 
 
 routes.get('/status', (req, res)=>{
-    res.send({ status : 200},{changes_done: "1"})
+    res.send({ status : 200 ,changes_done: "1"})
 });
 
 //TODO: add todo extension VSCODE
