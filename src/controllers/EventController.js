@@ -1,19 +1,18 @@
 const Event = require('../models/Event');
 const User =  require('../models/User');
 const jwt =      require('jsonwebtoken');
-const Order = require('../models/Order');
 //const { delete } = require('../routes');
+
+
 
 module.exports = {
     createEvent(req, res){
         jwt.verify(req.token, 'secret', async(err, authData) => {
             if (err) {
-                console.log("error in createEvent")
-                res.status(401);
+                    res.status(401);
             } else {
-                console.log("|||test3",req.body);
-                console.log("|||test4:", req.headers);
                 const {title, description, price, sport, date } = req.body;
+                console.log("|||req.headers:", req.headers);
                // const { user_id } = req.headers;
                 const { filename } = req.file;
 
@@ -23,7 +22,7 @@ module.exports = {
                     console.log("WRONG USER ID !!!");
                     return res.status(400).json({ message: 'User dow not exist'})
                 }
-                console.log("|||test5");
+
                 const event = await Event.create({
                     title,
                     description,

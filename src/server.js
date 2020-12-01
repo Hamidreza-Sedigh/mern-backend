@@ -16,6 +16,7 @@ if(process.env.NODE_ENV !== 'production' ){
     require('dotenv').config()
 }
 
+//connect to database:
 try {
     mongoose.connect(process.env.MONGO_DB_CONNECTION, {
         useNewUrlParser: true,
