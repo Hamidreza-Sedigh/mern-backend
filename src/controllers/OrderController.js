@@ -7,7 +7,7 @@ module.exports = {
     createOrder(req, res){
         console.log("test at first", req.body);
         jwt.verify(req.token, 'secret', async(err, authData) => {
-            console.log("test1");
+            console.log("test1 in OrderController");
             if (err) {
                 console.log("test2",err);
                 res.status(401);

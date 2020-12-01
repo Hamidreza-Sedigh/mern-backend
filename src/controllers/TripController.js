@@ -6,7 +6,7 @@ const jwt =      require('jsonwebtoken');
 module.exports = {
     createTrip(req, res){
         jwt.verify(req.token, 'secret', async(err, authData) => {
-            console.log("test1");
+            console.log("test1 in TripController");
             if (err) {
                 console.log("test2",err);
                 res.status(401);
